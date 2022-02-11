@@ -133,3 +133,10 @@ function marcaPontos (){
       ponto.play();
   }
 }
+
+p5.prototype.collidePointRect = function (pointX, pointY, x, y, xW, yW) {
+if (pointX >= x &&       
+    pointX <= x + xW &&   
+    pointY >= y &&        
+    pointY <= y + yW) {   
+        return true;
