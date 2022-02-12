@@ -1,5 +1,5 @@
 //variáveis da bolinha
-let xBolinha = 300
+let xBolinha = 310
 let yBolinha = 200
 let diametro = 15
 let raio = diametro / 2
@@ -15,7 +15,7 @@ let raqueteComprimento = 10
 let raqueteAltura = 80
 
 //variáveis raquete oponente
-let xRaqueteOponente = 580
+let xRaqueteOponente = 570
 let yRaqueteOponente = 160
 
 //variáveis pontuação
