@@ -5,3 +5,9 @@ html, body {
 canvas {
   display: block;
 }
+
+h1 {
+ font-weitgh: 700;
+  font-style: italic;
+  font-size: 5rem;
+}
