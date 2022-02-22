@@ -140,3 +140,19 @@ if (pointX >= x &&
     pointY >= y &&        
     pointY <= y + yW) {   
         return true;
+  
+  
+  p5.prototype.collideLineCircle = function( x1,  y1,  x2,  y2,  cx,  cy,  diameter) {
+
+  var inside1 = this.collidePointCircle(x1,y1, cx,cy,diameter);
+  var inside2 = this.collidePointCircle(x2,y2, cx,cy,diameter);
+  if (inside1 || inside2) return true;
+
+  var distX = x1 - x2;
+  var distY = y1 - y2;
+  var len = this.sqrt( (distX*distX) + (distY*distY) );
+
+  var dot = ( ((cx-x1)*(x2-x1)) + ((cy-y1)*(y2-y1)) ) / this.pow(len,2);
+
+  var closestX = x1 + (dot * (x2-x1));
+  var closestY = y1 + (dot * (y2-y1));
